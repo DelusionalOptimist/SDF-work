@@ -6,8 +6,8 @@ int main(void)
     
     char ch;
 
-    fptr1 = fopen("q5_file_1.", "r");
-    fptr2 = fopen("q5_file_2", "r");
+    fptr1 = fopen("q5_file_1.txt", "r");
+    fptr2 = fopen("q5_file_2.txt", "r");
     
     int count = 0;
 
