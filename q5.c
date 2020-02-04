@@ -1,38 +1,36 @@
 #include <stdio.h>
 
+#define BUFSIZE 1024
+
 int main(void)
 {
+    static char buffer[BUFSIZE];
+
     FILE *fptr1, *fptr2;
     
     char ch;
 
-    fptr1 = fopen("q5_file_1.txt", "r");
-    fptr2 = fopen("q5_file_2.txt", "r");
+    fptr1 = fopen("File1.txt", "r");
+    fptr2 = fopen("File2.txt", "r");
     
     int count = 0;
 
-    while ((ch = getc(fptr1)) != EOF || (ch = getc(fptr2)) != EOF)
+    while (((ch = getc(fptr1)) != EOF) || ((ch = getc(fptr2)) != EOF))
     {
-        if (count % 2 == 0)
+        while (fgets(buffer, BUFSIZE, fptr1)) 
         {
-            while (ch != '\n')
-            {
-                printf("%c", ch);
-            }
-            printf("%c", ch);
-            count++;
+            printf("%s", buffer);
+            break;
         }
-
-        else
+        while (fgets(buffer, BUFSIZE, fptr2)) 
         {
-            while (ch != '\n')
-            {
-                printf("%c", ch);
-            }
-            printf("%c", ch);
-            count++;
+            printf("%s", buffer);
+            break;
         }
     }
+
     fclose(fptr1);
     fclose(fptr2);
+
+    return 0;
 }
