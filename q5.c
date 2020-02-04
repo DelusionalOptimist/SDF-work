@@ -33,4 +33,6 @@ int main(void)
             count++;
         }
     }
+    fclose(fptr1);
+    fclose(fptr2);
 }
