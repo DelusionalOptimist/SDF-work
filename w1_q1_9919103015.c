@@ -2,8 +2,7 @@
 
 #include <stdlib.h>
 
-#
-define SIZE 4
+#define SIZE 4
 
 int main(void) {
   int arr[SIZE];
@@ -37,6 +36,8 @@ int main(void) {
             top2--;
             arr[top2] = elem;
             break;
+          default:
+            printf("Invalid choice");
           }
         }
       }
@@ -51,8 +52,12 @@ int main(void) {
       case 2:
         top2++;
         break;
+      default:
+        printf("Invalid choice");
       }
       break;
+      default:
+        printf("Invalid choice");
     }
   }
 }
