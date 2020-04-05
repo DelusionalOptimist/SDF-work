@@ -1,2 +1,2 @@
-# noob_stuff
+# `noob_stuff`
 Made with ❤️ for sharing code.
