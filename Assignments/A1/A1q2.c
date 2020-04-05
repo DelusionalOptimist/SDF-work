@@ -28,7 +28,7 @@ int main()
     free(c);
     
     int sum = 0;
-    printf("\nZ: ");
+    printf("Z: ");
     sort(z,ei);
     for (i=0; i<ei; ++i)
     {
