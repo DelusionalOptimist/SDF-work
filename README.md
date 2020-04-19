@@ -1,2 +1,2 @@
-# `noob_stuff`
-Made with ❤️ for sharing code.
+# `SDF-work`
+Made for sharing SDF - "Software Development Fundamentals" assignments to get through college. 
